@@ -127,6 +127,8 @@ div::before {
         var(--total-black) 0px 0px 0px 100px,
         var(--circle-green) 0px 0px 0px 104px,
         var(--total-black) 0px 0px 0px 108px;
+
+
     z-index: 2;
 }
 

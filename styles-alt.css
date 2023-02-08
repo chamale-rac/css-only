@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,900&display=swap');
+
+* {
+    --back-black: #141213;
+    --total-black: #161415;
+    --rope-black: #161415;
+    --circle-red: #fe3217;
+    --back-red: #dc1237;
+    --circle-yellow: #fdf70b;
+    --circle-blue: #2e17e4;
+    --circle-green: #1c7616;
+    --circle-size: 7.6px;
+}
+
+body {
+    position: relative;
+    display: grid;
+
+    background-color: var(--back-black);
+
+    height: 100vh;
+
+    margin: 0;
+
+    overflow-y: hidden;
+    filter: brightness(80%)
+}
+
+.body-wrap, .text-wrap, .head-wrap, .body, .text, .head, .flood {
+    grid-area: 1/-1;
+}
+
+.body-wrap {
+    filter: drop-shadow(-2px -2px 5px var(--rope-black)) drop-shadow(0px 0px 2px var(--rope-black));
+}
+
+.head-wrap {
+    filter: drop-shadow(0px 0px 20px var(--rope-black));
+}
+
+.body {
+    height: 100vh;
+}
+
+
+
+.text {
+    margin-top: 61vh;
+
+
+    font-family: 'Kanit', sans-serif;
+    font-size: 6rem;
+    text-align: center;
+    color: white;
+    background-color: var(--back-red);
+
+    white-space: nowrap;
+
+    line-height: 1;
+    height: fit-content;
+
+    margin-inline-start: 80px;
+    margin-inline-end: 80px;
+    padding-right: 15px;
+}
+
+.body {
+    background-color: var(--rope-black);
+    clip-path: polygon(59% 60%,
+            60.5% 65%,
+            61.2% 67%,
+            61.4% 67%,
+            61.1% 66.9%,
+            62% 68.5%,
+            63% 69%,
+            64% 69.5%,
+            65% 70%,
+
+            82% 74%,
+            84% 76%,
+            85% 80%,
+            88% 100%,
+
+            50% 100%,
+
+            12% 100%,
+            15% 80%,
+            16% 76%,
+            19% 74%,
+
+            35% 70%,
+            36% 69.5%,
+            37% 69%,
+            38% 68.5%,
+            38.9% 66.9%,
+            38.6% 67%,
+            38.8% 67%,
+            39.5% 65%,
+            41% 60%);
+
+}
+
+
+.flood {
+    height: 18vh;
+    width: 102.2%;
+    position: block;
+    background-color: yellow;
+}
+
+.head-wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.head {
+    align-self: center;
+    margin-bottom: 155px;
+    width: 0.8rem;
+    height: 0.8rem;
+    border-radius: 50%;
+    background-size: 1rem 1rem;
+    background-color: var(--circle-red);
+
+    box-shadow: var(--total-black) 0px 0px 0px calc(var(--circle-size) * 1),
+        var(--circle-yellow) 0px 0px 0px calc(var(--circle-size) * 2),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 3),
+        var(--circle-yellow) 0px 0px 0px calc(var(--circle-size) * 4),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 5),
+        var(--circle-yellow) 0px 0px 0px calc(var(--circle-size) * 6),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 7),
+        var(--circle-blue) 0px 0px 0px calc(var(--circle-size) * 8),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 9),
+        var(--circle-blue) 0px 0px 0px calc(var(--circle-size) * 10),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 11),
+        var(--circle-blue) 0px 0px 0px calc(var(--circle-size) * 12),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 13),
+        var(--circle-red) 0px 0px 0px calc(var(--circle-size) * 14),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 15),
+        var(--circle-red) 0px 0px 0px calc(var(--circle-size) * 16),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 17),
+        var(--circle-red) 0px 0px 0px calc(var(--circle-size) * 18),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 19),
+        var(--circle-green) 0px 0px 0px calc(var(--circle-size) * 20),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 21),
+        var(--circle-green) 0px 0px 0px calc(var(--circle-size) * 22),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 23),
+        var(--circle-green) 0px 0px 0px calc(var(--circle-size) * 24),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 25),
+        var(--circle-green) 0px 0px 0px calc(var(--circle-size) * 26),
+        var(--total-black) 0px 0px 0px calc(var(--circle-size) * 27);
+
+    z-index: 1;
+}
