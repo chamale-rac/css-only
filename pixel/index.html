@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel-Art</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="canvas" id="canvas">
+      <script>
+        canvas_area = 1128 ** 2;
+        pixel_area = 8 ** 2;
+        div_amount = canvas_area / pixel_area;
+        for (i = 0; i < div_amount; i++) {
+          var pixel = document.createElement("div");
+          myString = "alert(" + i + ")";
+          pixel.setAttribute("onClick", myString);
+          pixel.className = "pixel";
+          document.getElementById("canvas").appendChild(pixel);
+        }
+      </script>
+    </div>
+  </body>
+</html>

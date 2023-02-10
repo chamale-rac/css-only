@@ -1,0 +1,105 @@
+/*port: http://127.0.0.1:5500/pixel/index.html*/
+:root {
+    --canvas-height: 1128px;
+    --canvas-width: 1128px;
+
+    --pixel-height: 8px;
+    --pixel-width: 8px;
+
+
+    --ccc-purple-floor: #221447;
+    --ccc-purple-heaven: #221646;
+    --ccc-pink-heaven-detail-0: #723c6a;
+    --ccc-pink-heaven-detail-1: #9b4569;
+    --ccc-white-heaven: #cd75a5;
+
+    --ccc-purple-room-back-wall: #2a1743;
+    --ccc-brown-room-right-wall: #681d34;
+}
+
+
+body {
+    background-color: #777477;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas {
+    height: var(--canvas-height);
+    width: var(--canvas-width);
+    position: relative
+}
+
+.canvas::before {
+    content: "";
+    background-image: url(https://drive.google.com/uc?id=1bB0XF6op8kGOixWNejy5i_hb-akfThSz);
+    background-size: var(--canvas-height) var(--canvas-width);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+    z-index: -2;
+}
+
+.pixel {
+    height: var(--pixel-height);
+    width: var(--pixel-width);
+    float: left;
+    box-shadow: 0px 0px 1px rgba(255, 255, 255, 0.362);
+}
+
+.pixel:nth-child(n + 2):nth-child(-n + 127),
+.pixel:nth-child(n + 143):nth-child(-n + 267),
+.pixel:nth-child(n + 284):nth-child(-n + 407),
+.pixel:nth-child(n + 425):nth-child(-n + 547),
+.pixel:nth-child(n + 566):nth-child(-n + 687),
+.pixel:nth-child(n + 707):nth-child(-n + 827),
+.pixel:nth-child(967),
+.pixel:nth-child(965),
+.pixel:nth-child(n + 989):nth-child(-n + 1107) {
+    background-color: var(--ccc-purple-heaven);
+}
+
+.pixel:nth-child(n + 1553):nth-child(-n + 1668),
+.pixel:nth-child(141n + 1668):nth-child(-141n + 8718),
+.pixel:nth-child(141n + 10410):nth-child(-141n + 14922) {
+    background-color: var(--ccc-purple-room-back-wall);
+}
+
+.pixel:nth-child(141n + 1669):nth-child(-141n + 8860),
+.pixel:nth-child(141n + 10411):nth-child(-141n + 14923),
+.pixel:nth-child(141n + 12245):nth-child(-141n + 15065),
+.pixel:nth-child(141n + 12246):nth-child(-141n + 15207) {
+    background-color: var(--ccc-brown-room-right-wall);
+}
+
+.pixel:nth-child(n + 848):nth-child(-n + 964),
+.pixel:nth-child(966) {
+    background-color: var(--ccc-pink-heaven-detail-0);
+}
+
+.pixel:nth-child(n + 1130):nth-child(-n + 1246) {
+    background-color: var(--ccc-pink-heaven-detail-1);
+}
+
+.pixel:nth-child(n + 1271):nth-child(-n + 1387),
+.pixel:nth-child(n + 1412):nth-child(-n + 1527) {
+    background-color: var(--ccc-white-heaven);
+}
+
+.pixel:nth-child(15000) {
+    background: linear-gradient(90deg, yellow 50%, blue 50%)
+}
+
+.pixel:nth-child(15001) {
+    background-color: yellow;
+}
+
+
+.pixel:nth-child(n + 17627) {
+    background-color: var(--ccc-purple-floor);
+}
