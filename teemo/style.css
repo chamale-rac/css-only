@@ -3,7 +3,7 @@ image: https://drive.google.com/uc?id=1cJekgU3EQano9E_GR7ufdhnurU2fMs-0
 port: http://127.0.0.1:5500/teemo/index.html
 */
 :root {
-    --teemo-opacity: 0.2;
+    --teemo-opacity: 0.21;
     --lines-opacity: 1;
 
     --canvas-size: 1024px;
@@ -36,7 +36,28 @@ port: http://127.0.0.1:5500/teemo/index.html
 
     --triangle-button: #7a9eac;
     --triangle-button-radio: #6a1320;
+
+    --plus-button: #febb31;
+    --plus-button-radio: #4e1414;
+
+    --disk-input: #7a0a2a;
+    --disk-input-radio: #630721;
+
+    --inferior-input: #770a29;
+    --inferior-input-radio: #290830;
+
+    --eye-inner: #790929;
+    --smile-inner: #8d141d;
+
+    --face-screen: #fefffd;
+    --face-screen-radio: #6d0f26;
+    --face-screen-inner: #b6768e;
+
+    --body-background: #e4fffc;
+    --body-dots: #56ddd671;
+    --body-dots-shadow: #d2fb9f;
 }
+
 
 
 body {
@@ -72,6 +93,7 @@ body {
     float: left;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, var(--lines-opacity));
 }
+
 
 .pixel {
     height: var(--pixel-size);
@@ -347,7 +369,7 @@ body {
 
 /*button*/
 
-.pixel:nth-child(11) .sub-pixel:nth-child(2) .alter-pixel:nth-child(1)::after {
+.pixel:nth-child(11) .sub-pixel:nth-child(2) .button:nth-child(1)::after {
     --less-h: 48px;
     --less-w: 48px;
     --x: -42px;
@@ -364,7 +386,7 @@ body {
     transform: translateY(var(--y)) translateX(var(--x));
 }
 
-.pixel:nth-child(11) .sub-pixel:nth-child(2) .alter-pixel:nth-child(2)::after {
+.pixel:nth-child(11) .sub-pixel:nth-child(2) .button:nth-child(2)::after {
     --less-h: 44px;
     --less-w: 44px;
     --x: -86px;
@@ -381,7 +403,7 @@ body {
     transform: translateY(var(--y)) translateX(var(--x));
 }
 
-.pixel:nth-child(11) .sub-pixel:nth-child(2) .alter-pixel:nth-child(3)::after {
+.pixel:nth-child(11) .sub-pixel:nth-child(2) .button:nth-child(3)::after {
     --less-h: 36px;
     --less-w: 36px;
     --x: -38px;
@@ -398,7 +420,7 @@ body {
     transform: translateY(var(--y)) translateX(var(--x));
 }
 
-.pixel:nth-child(11) .sub-pixel:nth-child(2) .alter-pixel:nth-child(4) {
+.pixel:nth-child(11) .sub-pixel:nth-child(2) .button:nth-child(4) {
     --x: 520px;
     --y: -230px;
 
@@ -411,7 +433,7 @@ body {
     transform-origin: var(--y) var(--x);
 }
 
-.pixel:nth-child(11) .sub-pixel:nth-child(2) .alter-pixel:nth-child(4)::before {
+.pixel:nth-child(11) .sub-pixel:nth-child(2) .button:nth-child(4)::before {
     content: "";
     height: 28px;
     width: 34px;
@@ -423,6 +445,319 @@ body {
 
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
+.pixel:nth-child(11) .sub-pixel:nth-child(1) .button:nth-child(1) {
+    --x: 34px;
+    --y: 120px;
+
+    height: 44px;
+    width: 44px;
+    background-color: var(--plus-button-radio);
+
+    clip-path: polygon(8% 35%,
+            35% 35%,
+            35% 8%,
+            65% 8%,
+            65% 35%,
+            92% 35%,
+            92% 65%,
+            65% 65%,
+            65% 92%,
+            35% 92%,
+            35% 65%,
+            8% 65%);
+    transform: rotate(-20deg) scale(1.2);
+    transform-origin: var(--y) var(--x);
+}
+
+.pixel:nth-child(11) .sub-pixel:nth-child(1) .button:nth-child(1)::before {
+    content: "";
+    height: 34px;
+    width: 34px;
+    top: 5px;
+    left: 5px;
+    display: block;
+    position: relative;
+    background-color: var(--plus-button);
+
+    clip-path: polygon(0 35%,
+            35% 35%,
+            35% 0%,
+            65% 0%,
+            65% 35%,
+            100% 35%,
+            100% 65%,
+            65% 65%,
+            65% 100%,
+            35% 100%,
+            35% 65%,
+            0% 65%);
+}
+
+.pixel:nth-child(11) .sub-pixel:nth-child(1) .button:nth-child(2)::after {
+    --less-h: 48px;
+    --plus-w: 46px;
+    --x: 310px;
+    --y: 25px;
+    content: "";
+    height: calc(var(--alter-pixel-size) - var(--less-h));
+    width: calc(var(--alter-pixel-size) + var(--plus-w));
+    display: inline-block;
+    background-color: var(--disk-input);
+    border-radius: 20% 10% 20% 10%;
+    border-style: solid;
+    border-width: 2px;
+    border-color: var(--disk-input-radio);
+    transform: rotate(-18deg);
+    transform-origin: var(--y) var(--x);
+}
+
+.pixel:nth-child(11) .sub-pixel:nth-child(1) .button:nth-child(3)::after {
+    --less-h: 52px;
+    --less-w: 40px;
+    --x: 40px;
+    --y: 150px;
+    content: "";
+    height: calc(var(--alter-pixel-size) - var(--less-h));
+    width: calc(var(--alter-pixel-size) - var(--less-w));
+    display: inline-block;
+    background-color: var(--inferior-input);
+    border-radius: 40% 40% 40% 40%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--inferior-input-radio-input-radio);
+    transform: rotate(-14deg);
+    transform-origin: var(--y) var(--x);
+}
+
+.pixel:nth-child(11) .sub-pixel:nth-child(1) .button:nth-child(4) {
+    --less-h: 52px;
+    --less-w: 40px;
+    --x: 105px;
+    --y: 65px;
+    content: "";
+    height: calc(var(--alter-pixel-size) - var(--less-h));
+    width: calc(var(--alter-pixel-size) - var(--less-w));
+    display: inline-block;
+    background-color: var(--inferior-input);
+    border-radius: 40% 40% 40% 40%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--inferior-input-radio-input-radio);
+    transform: rotate(-18deg);
+    transform-origin: var(--y) var(--x);
+}
+
+.pixel:nth-child(11) .sub-pixel:nth-child(1) .button:nth-child(4)::before {
+    --less-h: 52px;
+    --less-w: 40px;
+
+
+    top: 0px;
+    left: -2px;
+    display: block;
+    position: relative;
+
+    --x: 40px;
+    --y: 120px;
+    content: "";
+    height: calc(var(--alter-pixel-size) - var(--less-h));
+    width: calc(var(--alter-pixel-size) - var(--less-w));
+    display: inline-block;
+    background-color: var(--inferior-input);
+    border-radius: 40% 40% 40% 40%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--inferior-input-radio-input-radio);
+
+}
+
+/*face*/
+
+.pixel:nth-child(7) .sub-pixel:nth-child(3) .face:nth-child(1) {
+    --less-h: 40px;
+    --less-w: 54px;
+    --x: -130px;
+    --y: 50px;
+    content: "";
+    height: calc(var(--alter-pixel-size) - var(--less-h));
+    width: calc(var(--alter-pixel-size) - var(--less-w));
+    display: inline-block;
+    background-color: var(--eye-inner);
+    border-radius: 40% 40% 40% 40%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--eye-inner);
+    transform: rotate(-14deg);
+    transform-origin: var(--y) var(--x);
+    position: relative;
+    z-index: 2;
+}
+
+.pixel:nth-child(7) .sub-pixel:nth-child(3) .face:nth-child(2) {
+    --less-h: 38px;
+    --less-w: 54px;
+    --x: 170px;
+    --y: 60px;
+    content: "";
+    height: calc(var(--alter-pixel-size) - var(--less-h));
+    width: calc(var(--alter-pixel-size) - var(--less-w));
+    display: inline-block;
+    background-color: var(--eye-inner);
+    border-radius: 40% 40% 40% 40%;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--eye-inner);
+    transform: rotate(-25deg);
+    transform-origin: var(--y) var(--x);
+    position: relative;
+    z-index: 2;
+}
+
+.pixel:nth-child(7) .sub-pixel:nth-child(3) .face:nth-child(3)::after {
+    --less-h: 38px;
+    --less-w: 54px;
+    --x: 120px;
+    --y: -10px;
+    content: "";
+    width: 40px;
+    height: 12px;
+    border-radius: 50%;
+    box-shadow: 0px 8px 0px 0px var(--smile-inner);
+    display: inline-block;
+    transform: rotate(-20deg) scale(0.6);
+    transform-origin: var(--y) var(--x);
+    position: relative;
+    z-index: 2;
+}
+
+.pixel:nth-child(7) .sub-pixel:nth-child(3) .face:nth-child(4) {
+    --plus-h: 60px;
+    --plus-w: 120px;
+    --x: 290px;
+    --y: -190px;
+    content: "";
+    height: calc(var(--alter-pixel-size) + var(--plus-h));
+    width: calc(var(--alter-pixel-size) + var(--plus-w));
+    display: inline-block;
+    background-color: transparent;
+    border-radius: 20% 20% 15% 15%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--face-screen-radio);
+    transform: rotate(-20deg);
+    transform-origin: var(--y) var(--x);
+    transform-style: preserve-3d;
+}
+
+
+.pixel:nth-child(7) .sub-pixel:nth-child(3) .face:nth-child(4)::after {
+    --plus-h: 55px;
+    --plus-w: 115px;
+    --x: 290px;
+    --y: -190px;
+
+
+    display: block;
+    position: relative;
+
+    content: "";
+    height: calc(var(--alter-pixel-size) + var(--plus-h));
+    width: calc(var(--alter-pixel-size) + var(--plus-w));
+    display: inline-block;
+    background-color: var(--face-screen);
+    border-radius: 20% 20% 10% 10%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--face-screen-inner) var(--face-screen-inner) transparent var(--face-screen-inner);
+    transform: translateZ(-1px);
+}
+
+/*body*/
+.pixel:nth-child(6) .sub-pixel:nth-child(1) .body {
+    --plus-h: 230px;
+    --plus-w: 150px;
+    --x: -340px;
+    --y: 80px;
+    content: "";
+    height: calc(var(--alter-pixel-size) + var(--plus-h));
+    width: calc(var(--alter-pixel-size) + var(--plus-w));
+    display: inline-block;
+
+    border-radius: 10% 10% 10% 10%;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--face-screen-radio);
+    transform: rotate(-20deg);
+    transform-origin: var(--y) var(--x);
+
+    overflow: hidden;
+}
+
+.pixel:nth-child(6) .sub-pixel:nth-child(1) .body::before {
+    opacity: 0.9;
+    --plus-h: 230px;
+    --plus-w: 150px;
+    --x: -340px;
+    --y: 80px;
+    content: "";
+
+    height: 300%;
+    width: 200%;
+    top: -120%;
+    left: -50%;
+
+    display: block;
+    position: relative;
+
+    border-style: solid;
+    border-width: 0px;
+    border-color: var(--face-screen-radio);
+
+    background-image: radial-gradient(var(--body-dots-shadow) 30%, transparent 30%),
+        radial-gradient(var(--body-dots-shadow) 30%, transparent 30%);
+    background-color: var(--body-background);
+    background-size: 11px 11px;
+
+
+    transform: rotate(30deg);
+}
+
+.pixel:nth-child(6) .sub-pixel:nth-child(1) .body::after {
+    opacity: 0.9;
+    --plus-h: 230px;
+    --plus-w: 150px;
+    --x: -340px;
+    --y: 80px;
+    content: "";
+
+    height: 300%;
+    width: 200%;
+    top: -403%;
+    left: -52%;
+
+    display: flex;
+    position: relative;
+
+    border-style: solid;
+    border-width: 0px;
+    border-color: var(--face-screen-radio);
+
+    background-image: radial-gradient(var(--body-dots) 30%, transparent 30%),
+        radial-gradient(var(--body-dots)30%, transparent 30%);
+    background-color: transparent;
+    background-size: 11px 11px;
+
+
+    transform: rotate(30deg);
+}
+
+
+/*width: 80px;
+      height: 25px;
+      border-radius: 50%;
+      box-shadow: 0px 15px 0px 0px red;*/
+
 
 /*
 .pixel:nth-child(14) .sub-pixel:nth-child(4) .alter-pixel:nth-child(3)::after {
