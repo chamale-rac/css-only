@@ -61,9 +61,15 @@ port: http://127.0.0.1:5500/bmo/index.html
     --control-border: #300c2b;
     --control-inner: #6b93b5;
 
+    --body-shadow-color: #c77a45;
     --control-inner-scroll: #b4ffe0;
     --shadow-down: 2.0px 4.0px 4.0px hsl(0deg 0% 0% / 0.44);
+
     --shadow-medium: 5.0px 9.9px 9.9px hsl(0deg 0% 0% / 0.35);
+    /*
+
+    --shadow-medium: 10px 10px 3px var(--body-shadow-color);
+    */
     --shadow-mini: 2px 1.8px 1.8px hsl(0deg 0% 0% / 0.47);
 
     --shadow-down-vertical: 2.0px -4.0px 4.0px hsl(0deg 0% 0% / 0.44);
